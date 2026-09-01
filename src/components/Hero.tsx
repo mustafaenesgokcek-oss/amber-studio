@@ -1,50 +1,164 @@
+const features = [
+  {
+    title: "Written deliverables, not software",
+    description:
+      "You get a report, prompt library, guide, or set of SOPs — not just a tool.",
+  },
+  {
+    title: "Built around your existing workflows",
+    description:
+      "We start with how your team actually works. Nothing gets added unless it solves a real problem.",
+  },
+  {
+    title: "Fast, practical, no fluff",
+    description:
+      "Clear steps, quick wins, and systems your team will actually use.",
+  },
+];
+
+const workflowSteps = [
+  { label: "Client inquiry", active: true },
+  { label: "Auto-reply sent", active: false },
+  { label: "AI processes", active: true },
+  { label: "Data extracted", active: false },
+  { label: "Team notified", active: true },
+  { label: "Ready to review", active: false },
+];
+
+const wontDo = [
+  "Replace employees or hire for you",
+  "Promise full automation",
+  "Build software or write custom code",
+  "Pretend AI should touch everything",
+];
+
 export default function Hero() {
   return (
-    <section className="bg-[#F8F5F0] pt-36 pb-28">
+    <section className="bg-[#F7F0E5] pt-32 pb-24">
       <div className="max-w-6xl mx-auto px-8">
-        <p className="text-sm text-[#B07628] mb-10 tracking-wide">
-          Practical AI workflows for small teams
-        </p>
+        <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
 
-        <h1 className="text-5xl md:text-6xl lg:text-[64px] font-bold text-[#1C1714] leading-[1.07] tracking-tight mb-8 max-w-3xl">
-          Your agency is already using AI. Now make it work.
-        </h1>
+          {/* Left: main content */}
+          <div>
+            {/* Eyebrow */}
+            <p className="text-[10px] tracking-[0.28em] text-[#FF9D08] uppercase font-medium mb-9">
+              AI Workflow Studio
+            </p>
 
-        <p className="text-lg md:text-xl text-[#3D3530] max-w-lg leading-relaxed mb-12">
-          Amber Studio helps small agencies turn scattered AI usage into clear, repeatable
-          workflows — across content, reporting, client intake, follow-up, and operations.
-        </p>
+            {/* Headline */}
+            <h1 className="text-5xl md:text-[58px] lg:text-[62px] font-bold text-[#0F1B2A] leading-[1.06] tracking-tight mb-8">
+              We build the workflows.{" "}
+              <span className="text-[#C87118]">You run the agency.</span>
+            </h1>
 
-        <div className="flex flex-col sm:flex-row items-start gap-5">
-          <a
-            href="#contact"
-            className="bg-[#1C1714] hover:bg-[#2D2520] text-[#F8F5F0] text-sm font-medium px-7 py-3.5 transition-colors"
-          >
-            Book a 20-Minute Workflow Review
-          </a>
-          <a
-            href="#services"
-            className="text-sm text-[#7A6F67] hover:text-[#1C1714] underline underline-offset-4 decoration-[#DDD5C8] hover:decoration-[#B07628] transition-colors py-3.5"
-          >
-            See what we deliver
-          </a>
-        </div>
+            {/* Tagline */}
+            <p className="text-[11px] text-[#9AA7B6] tracking-[0.2em] uppercase mb-7">
+              Practical AI workflows for small teams.
+            </p>
 
-        <p className="mt-8 text-xs text-[#9B8C82]">
-          No commitment. We will tell you honestly where AI can help — and where it probably should not.
-        </p>
+            {/* Paragraph */}
+            <p className="text-[17px] text-[#0F1B2A]/65 leading-relaxed mb-10 max-w-[480px]">
+              We start with your real workflows — content, reporting, intake,
+              follow-up, and internal operations — and build practical AI systems
+              around them. Not the other way around.
+            </p>
 
-        <div className="mt-20 pt-8 border-t border-[#DDD5C8] grid grid-cols-2 md:grid-cols-3 gap-8 max-w-lg">
-          {[
-            { value: "Founder-led", label: "You work directly with Enes, not a junior team." },
-            { value: "Written deliverables", label: "Every engagement produces something your team can actually use." },
-            { value: "Honest scope", label: "We tell you when AI is not the right answer." },
-          ].map((s) => (
-            <div key={s.value}>
-              <div className="text-sm font-semibold text-[#1C1714] mb-1">{s.value}</div>
-              <div className="text-xs text-[#9B8C82] leading-snug">{s.label}</div>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
+              <a
+                href="#contact"
+                className="bg-[#0F1B2A] hover:bg-[#162435] text-[#F7F0E5] text-sm font-medium px-8 py-4 transition-colors tracking-wide whitespace-nowrap"
+              >
+                Get a 20-minute workflow review
+              </a>
+              <a
+                href="#pricing"
+                className="text-sm text-[#0F1B2A] border border-[#E7E0D6] hover:border-[#FF9D08] hover:text-[#C87118] px-8 py-4 transition-colors tracking-wide whitespace-nowrap"
+              >
+                See Packages
+              </a>
             </div>
-          ))}
+
+            {/* Trust line */}
+            <p className="text-[9px] text-[#9AA7B6] tracking-[0.22em] uppercase mb-12">
+              Trusted by creative teams, agencies, and operators.
+            </p>
+
+            {/* Feature blocks */}
+            <div className="border-t border-[#E7E0D6] pt-8 grid sm:grid-cols-3 gap-6">
+              {features.map((f) => (
+                <div key={f.title}>
+                  <div className="text-[11px] font-semibold text-[#0F1B2A] mb-1.5 leading-snug">
+                    {f.title}
+                  </div>
+                  <div className="text-[11px] text-[#9AA7B6] leading-relaxed">
+                    {f.description}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: visual cards (desktop only) */}
+          <div className="hidden lg:flex flex-col gap-3.5 pt-14">
+
+            {/* Workflow card */}
+            <div className="bg-white border border-[#E7E0D6] p-5">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-2 h-2 rounded-full bg-[#FF9D08]" />
+                <span className="text-[9px] font-semibold text-[#0F1B2A] tracking-[0.2em] uppercase">
+                  Workflow
+                </span>
+              </div>
+              <div className="space-y-2.5">
+                {workflowSteps.map((step) => (
+                  <div key={step.label} className="flex items-center gap-3">
+                    <div
+                      className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                        step.active ? "bg-[#FF9D08]" : "bg-[#E7E0D6]"
+                      }`}
+                    />
+                    <span
+                      className={`text-xs leading-none ${
+                        step.active ? "text-[#0F1B2A]" : "text-[#9AA7B6]"
+                      }`}
+                    >
+                      {step.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Outcome card */}
+            <div className="bg-[#0F1B2A] p-5">
+              <div className="text-[9px] text-[#9AA7B6] tracking-[0.2em] uppercase mb-3">
+                Outcome
+              </div>
+              <div className="text-sm font-semibold text-[#FF9D08] mb-1 leading-snug">
+                Less repetitive work
+              </div>
+              <div className="text-sm font-semibold text-[#F7F0E5] leading-snug">
+                More consistent process
+              </div>
+            </div>
+
+            {/* What we don't do card */}
+            <div className="border border-[#E7E0D6] p-5 bg-[#FAF7F2]">
+              <div className="text-[9px] font-semibold text-[#0F1B2A] tracking-[0.2em] uppercase mb-3.5">
+                What we don&apos;t do
+              </div>
+              <ul className="space-y-2">
+                {wontDo.map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <span className="text-[#E7E0D6] text-xs shrink-0 leading-snug mt-px">—</span>
+                    <span className="text-xs text-[#9AA7B6] leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

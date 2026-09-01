@@ -23,24 +23,28 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="py-24 bg-[#FAF8F4]">
+    <section className="py-24 bg-[#FAF7F2]">
       <div className="max-w-6xl mx-auto px-8">
         <div className="max-w-2xl mb-16">
-          <p className="text-sm text-[#B07628] mb-5">Sound familiar?</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1C1714] leading-tight mb-6">
+          <p className="text-[10px] tracking-[0.25em] text-[#FF9D08] uppercase font-medium mb-5">
+            Sound familiar?
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F1B2A] leading-tight mb-6 tracking-tight">
             Most small agencies are using AI. But not systematically.
           </h2>
-          <p className="text-[#3D3530] text-lg leading-relaxed">
-            Random AI usage is better than nothing. But without structure, it creates new
-            problems: inconsistency, risk, and a team that cannot rely on it.
+          <p className="text-[#0F1B2A]/60 text-lg leading-relaxed">
+            Random AI usage is better than nothing. But without structure, it creates
+            new problems: inconsistency, risk, and a team that cannot rely on it.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-16">
           {problems.map((p) => (
-            <div key={p.title} className="border-t border-[#DDD5C8] py-7">
-              <h3 className="font-medium text-[#1C1714] mb-2 leading-snug">{p.title}</h3>
-              <p className="text-sm text-[#7A6F67] leading-relaxed">{p.description}</p>
+            <div key={p.title} className="border-t border-[#E7E0D6] py-7">
+              <h3 className="font-semibold text-[#0F1B2A] mb-2.5 leading-snug text-sm">
+                {p.title}
+              </h3>
+              <p className="text-sm text-[#9AA7B6] leading-relaxed">{p.description}</p>
             </div>
           ))}
         </div>

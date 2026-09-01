@@ -25,44 +25,81 @@ const pillars = [
   },
 ];
 
+const wontDo = [
+  "Replace employees or hire for you",
+  "Promise full automation or guarantee ROI",
+  "Make legal or compliance guarantees",
+  "Take over client communication on your behalf",
+  "Force unnecessary AI tools into your process",
+  "Build software or write custom code",
+  "Pretend AI should touch everything",
+];
+
 export default function WhatWeDo() {
   return (
-    <section className="py-24 bg-[#EDE8DF]">
+    <section className="py-24 bg-[#F7F0E5]">
       <div className="max-w-6xl mx-auto px-8">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
+
+          {/* Left */}
           <div>
-            <p className="text-sm text-[#B07628] mb-5">What We Do</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1C1714] leading-tight mb-7">
+            <p className="text-[10px] tracking-[0.25em] text-[#FF9D08] uppercase font-medium mb-5">
+              What We Do
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0F1B2A] leading-tight tracking-tight mb-7">
               We turn scattered AI use into reliable workflows.
             </h2>
-            <p className="text-[#3D3530] text-lg leading-relaxed mb-5">
-              Amber Studio works with small agencies to design, document, and implement AI
-              workflows your team can actually use — without guessing, without risk, and
-              without one person having to figure it out every time.
+            <p className="text-[#0F1B2A]/65 text-lg leading-relaxed mb-5">
+              Amber Studio works with small agencies to design, document, and implement
+              AI workflows your team can actually use — without guessing, without risk,
+              and without one person having to figure it out every time.
             </p>
-            <p className="text-[#7A6F67] text-base leading-relaxed mb-10">
+            <p className="text-[#9AA7B6] text-base leading-relaxed mb-10">
               We do not sell software. We deliver clear, practical systems built around
               how your agency already works.
             </p>
             <a
               href="#contact"
-              className="text-sm text-[#B07628] hover:text-[#1C1714] underline underline-offset-4 decoration-[#DDD5C8] hover:decoration-[#1C1714] transition-colors"
+              className="inline-block text-sm text-[#FF9D08] hover:text-[#C87118] transition-colors underline underline-offset-4 decoration-[#E7E0D6] hover:decoration-[#C87118]"
             >
               Book a free 20-minute review
             </a>
           </div>
 
-          <div className="divide-y divide-[#DDD5C8]">
-            {pillars.map((p) => (
-              <div key={p.number} className="py-6 flex gap-6">
-                <span className="shrink-0 text-xs font-mono text-[#9B8C82] pt-0.5 w-5">{p.number}</span>
-                <div>
-                  <h3 className="font-medium text-[#1C1714] mb-2">{p.title}</h3>
-                  <p className="text-sm text-[#7A6F67] leading-relaxed">{p.description}</p>
+          {/* Right */}
+          <div>
+            <div className="divide-y divide-[#E7E0D6]">
+              {pillars.map((p) => (
+                <div key={p.number} className="py-6 flex gap-6">
+                  <span className="shrink-0 text-[10px] font-mono text-[#9AA7B6] pt-0.5 w-6">
+                    {p.number}
+                  </span>
+                  <div>
+                    <h3 className="font-semibold text-sm text-[#0F1B2A] mb-2 leading-snug">
+                      {p.title}
+                    </h3>
+                    <p className="text-sm text-[#9AA7B6] leading-relaxed">{p.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* What we don't do */}
+            <div className="mt-8 border-t border-[#E7E0D6] pt-8">
+              <p className="text-[10px] font-semibold text-[#0F1B2A] tracking-[0.2em] uppercase mb-4">
+                What we don&apos;t do
+              </p>
+              <ul className="space-y-2">
+                {wontDo.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="text-[#E7E0D6] text-xs shrink-0 mt-px leading-snug">—</span>
+                    <span className="text-xs text-[#9AA7B6] leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+
         </div>
       </div>
     </section>

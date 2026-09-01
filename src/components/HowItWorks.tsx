@@ -27,32 +27,38 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="process" className="py-24 bg-[#FAF8F4]">
+    <section id="process" className="py-24 bg-[#FAF7F2]">
       <div className="max-w-6xl mx-auto px-8">
+
         <div className="max-w-2xl mb-16">
-          <p className="text-sm text-[#B07628] mb-5">Process</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1C1714] leading-tight mb-6">
+          <p className="text-[10px] tracking-[0.25em] text-[#FF9D08] uppercase font-medium mb-5">
+            Process
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F1B2A] leading-tight tracking-tight mb-6">
             How it works
           </h2>
-          <p className="text-[#3D3530] text-lg leading-relaxed">
+          <p className="text-[#0F1B2A]/65 text-lg leading-relaxed">
             A straightforward process from first call to finished documentation.
             No long sales cycles or open-ended engagements.
           </p>
         </div>
 
-        <div className="border-t border-[#DDD5C8] divide-y divide-[#DDD5C8] max-w-3xl">
+        <div className="border-t border-[#E7E0D6] divide-y divide-[#E7E0D6] max-w-3xl">
           {steps.map((step) => (
             <div key={step.number} className="py-8 flex gap-8">
-              <span className="shrink-0 text-sm font-mono text-[#9B8C82] pt-0.5 w-6">
+              <span className="shrink-0 text-[10px] font-mono text-[#9AA7B6] pt-1 w-6">
                 {step.number}
               </span>
               <div>
-                <h3 className="font-medium text-[#1C1714] mb-2">{step.title}</h3>
-                <p className="text-sm text-[#7A6F67] leading-relaxed">{step.description}</p>
+                <h3 className="font-semibold text-sm text-[#0F1B2A] mb-2 leading-snug">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-[#9AA7B6] leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

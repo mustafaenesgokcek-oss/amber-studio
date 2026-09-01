@@ -36,27 +36,30 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-[#F8F5F0]">
+    <section id="faq" className="py-24 bg-[#FAF7F2]">
       <div className="max-w-4xl mx-auto px-8">
+
         <div className="max-w-xl mb-14">
-          <p className="text-sm text-[#B07628] mb-5">FAQ</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1C1714] leading-tight">
+          <p className="text-[10px] tracking-[0.25em] text-[#FF9D08] uppercase font-medium mb-5">
+            FAQ
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F1B2A] leading-tight tracking-tight">
             Common questions
           </h2>
         </div>
 
-        <div className="border-t border-[#DDD5C8] divide-y divide-[#DDD5C8]">
+        <div className="border-t border-[#E7E0D6] divide-y divide-[#E7E0D6]">
           {faqs.map((faq, i) => (
             <div key={i}>
               <button
                 className="w-full flex items-center justify-between gap-6 py-6 text-left cursor-pointer"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="font-medium text-[#1C1714] leading-snug text-sm">
+                <span className="font-semibold text-[#0F1B2A] leading-snug text-sm">
                   {faq.q}
                 </span>
                 <svg
-                  className={`shrink-0 w-4 h-4 text-[#9B8C82] transition-transform duration-200 ${
+                  className={`shrink-0 w-4 h-4 text-[#9AA7B6] transition-transform duration-200 ${
                     open === i ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -68,13 +71,14 @@ export default function FAQ() {
                 </svg>
               </button>
               {open === i && (
-                <p className="pb-6 text-sm text-[#7A6F67] leading-relaxed max-w-2xl">
+                <p className="pb-6 text-sm text-[#9AA7B6] leading-relaxed max-w-2xl">
                   {faq.a}
                 </p>
               )}
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

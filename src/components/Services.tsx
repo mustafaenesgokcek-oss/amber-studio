@@ -53,14 +53,17 @@ const deliverables = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-[#F8F5F0]">
+    <section id="services" className="py-24 bg-[#FAF7F2]">
       <div className="max-w-6xl mx-auto px-8">
+
         <div className="max-w-2xl mb-16">
-          <p className="text-sm text-[#B07628] mb-5">Deliverables</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1C1714] leading-tight mb-6">
+          <p className="text-[10px] tracking-[0.25em] text-[#FF9D08] uppercase font-medium mb-5">
+            Deliverables
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F1B2A] leading-tight tracking-tight mb-6">
             What you will actually receive
           </h2>
-          <p className="text-[#3D3530] text-lg leading-relaxed">
+          <p className="text-[#0F1B2A]/65 text-lg leading-relaxed">
             Every engagement ends with written deliverables your team can use, follow,
             and build on — not just a conversation or general advice.
           </p>
@@ -68,19 +71,21 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 gap-x-16">
           {deliverables.map((d, i) => (
-            <div key={d.title} className="border-t border-[#DDD5C8] py-6 flex gap-6">
-              <span className="shrink-0 text-xs font-mono text-[#9B8C82] pt-0.5 w-5">
+            <div key={d.title} className="border-t border-[#E7E0D6] py-6 flex gap-6">
+              <span className="shrink-0 text-[10px] font-mono text-[#9AA7B6] pt-0.5 w-5">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>
-                <h3 className="font-medium text-[#1C1714] mb-1.5 leading-snug">{d.title}</h3>
-                <p className="text-sm text-[#7A6F67] leading-relaxed">{d.description}</p>
+                <h3 className="font-semibold text-sm text-[#0F1B2A] mb-1.5 leading-snug">
+                  {d.title}
+                </h3>
+                <p className="text-sm text-[#9AA7B6] leading-relaxed">{d.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <p className="mt-10 text-xs text-[#9B8C82] border-t border-[#DDD5C8] pt-6">
+        <p className="mt-10 text-xs text-[#9AA7B6] border-t border-[#E7E0D6] pt-6">
           Not every engagement includes all deliverables. Your package determines which ones apply.
         </p>
       </div>
