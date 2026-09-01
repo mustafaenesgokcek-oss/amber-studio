@@ -1,55 +1,65 @@
-const reasons = [
+const problems = [
   {
-    title: "We Speak Business, Not Jargon",
+    title: "Your team uses AI — but everyone does it differently",
     description:
-      "No buzzwords, no technical rabbit holes unless you want them. We translate AI into plain business value.",
+      "Some people use ChatGPT daily. Others have not touched it. There is no shared approach, no guidelines, and results are inconsistent from person to person.",
   },
   {
-    title: "Boutique Attention, Enterprise Thinking",
+    title: "Time-consuming work is not getting any faster",
     description:
-      "You work directly with senior consultants — not handed off to juniors after the sale.",
+      "Writing reports, onboarding clients, following up on leads — these tasks still eat hours, even when AI could realistically handle parts of them.",
   },
   {
-    title: "We've Built It Ourselves",
+    title: "You are not sure what AI is safe for client work",
     description:
-      "We don't just consult on AI — we've built AI products. We know what breaks in production.",
+      "What goes in a prompt? What should stay out? Without clear guidelines, your team is guessing — and that is a brand and confidentiality risk.",
   },
   {
-    title: "No Lock-In",
+    title: "Nothing is documented or repeatable",
     description:
-      "We build with open standards and document everything. You're never dependent on us to keep the lights on.",
+      "If the person who figured something out leaves, the knowledge goes with them. There is no system anyone else can follow without asking.",
   },
 ];
 
-export default function WhyUs() {
+export default function Problem() {
   return (
-    <section className="py-24 bg-black">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* CTA Banner */}
-        <div className="bg-gradient-to-r from-amber-500/10 via-amber-600/10 to-amber-500/10 border border-amber-500/30 rounded-3xl p-10 md:p-14 text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Why businesses choose{" "}
-            <span className="text-amber-400">Amber Studio</span>
+    <section className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="text-center mb-14">
+          <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
+            Sound familiar?
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-stone-900 leading-tight mb-5">
+            Most small agencies are using AI.
+            <br />
+            But not systematically.
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            There are a lot of AI consultants. Here&apos;s what makes us different.
+          <p className="text-stone-500 text-lg max-w-2xl mx-auto">
+            Random AI usage is better than nothing. But without structure, it creates new
+            problems: inconsistency, risk, and a team that cannot rely on it.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {reasons.map((r) => (
+        <div className="grid md:grid-cols-2 gap-5">
+          {problems.map((p) => (
             <div
-              key={r.title}
-              className="flex gap-4 bg-zinc-950 border border-gray-800 rounded-2xl p-6"
+              key={p.title}
+              className="flex gap-4 bg-stone-50 border border-stone-100 rounded-2xl p-6"
             >
-              <div className="shrink-0 w-8 h-8 bg-amber-500/20 rounded-lg flex items-center justify-center">
-                <svg className="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <div className="shrink-0 mt-0.5 w-5 h-5 rounded-full bg-red-50 border border-red-100 flex items-center justify-center">
+                <svg
+                  className="w-3 h-3 text-red-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </div>
               <div>
-                <h3 className="text-white font-semibold text-lg mb-2">{r.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{r.description}</p>
+                <h3 className="font-semibold text-stone-900 mb-1.5">{p.title}</h3>
+                <p className="text-stone-500 text-sm leading-relaxed">{p.description}</p>
               </div>
             </div>
           ))}

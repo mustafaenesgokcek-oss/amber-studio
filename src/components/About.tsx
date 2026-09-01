@@ -1,56 +1,72 @@
+const tags = [
+  "Digital marketing",
+  "Analytics",
+  "AI workflow strategy",
+  "Business systems",
+  "Content analytics",
+  "Economics & statistics",
+];
+
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-zinc-950">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Text */}
+    <section id="founder" className="py-24 bg-amber-50">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-14 items-start">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About <span className="text-amber-400">Amber Studio</span>
-            </h2>
-            <div className="space-y-5 text-gray-400 text-lg leading-relaxed">
-              <p>
-                Amber Studio was founded with one belief: most businesses are leaving enormous
-                value on the table because AI feels complicated, overhyped, or hard to trust.
-              </p>
-              <p>
-                We cut through the noise. We don&apos;t sell software — we partner with companies
-                to understand their specific context and build AI systems that actually work in
-                the real world.
-              </p>
-              <p>
-                Our approach is hands-on, practical, and results-focused. Every project ends
-                with your team empowered, not dependent.
-              </p>
+            <div className="w-16 h-16 rounded-2xl bg-amber-200 flex items-center justify-center mb-6">
+              <span className="text-xl font-bold text-amber-800">EG</span>
             </div>
+            <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-1">
+              Founder
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-1">Enes Gokcek</h2>
+            <p className="text-stone-500 text-sm mb-8">
+              Digital marketing · Analytics · AI workflows · Business systems
+            </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a
-                href="#contact"
-                className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-xl transition-all text-center"
-              >
-                Work With Us
-              </a>
+            <div className="grid grid-cols-2 gap-2.5">
+              {tags.map((tag) => (
+                <div
+                  key={tag}
+                  className="bg-white border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-600 text-center"
+                >
+                  {tag}
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Right: Values */}
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { icon: "🎯", title: "Results First", desc: "Every decision is tied to measurable business outcomes." },
-              { icon: "🤝", title: "True Partnership", desc: "We work with you, not just for you." },
-              { icon: "🔍", title: "No Hype", desc: "Honest about what AI can and can't do for your business." },
-              { icon: "⚡", title: "Move Fast", desc: "From idea to working prototype in days, not months." },
-            ].map((v) => (
-              <div
-                key={v.title}
-                className="bg-black border border-gray-800 rounded-2xl p-5"
-              >
-                <div className="text-2xl mb-3">{v.icon}</div>
-                <h4 className="text-white font-semibold mb-1">{v.title}</h4>
-                <p className="text-gray-500 text-sm">{v.desc}</p>
-              </div>
-            ))}
+          <div>
+            <div className="space-y-5 text-stone-600 leading-relaxed">
+              <p>
+                Amber Studio is led by Enes Gokcek, who works across digital marketing, analytics,
+                AI workflow strategy, and business systems.
+              </p>
+              <p>
+                His background combines social media growth, affiliate marketing, content analytics,
+                economics, applied statistics, and computer science — a mix that does not come from
+                a single career track.
+              </p>
+              <p>
+                That combination is what makes Amber Studio useful for small agencies. We understand
+                both sides of the work: the creative pressure to produce strong content, and the
+                operational pressure to report, organize, follow up, onboard clients, and keep
+                everything consistent.
+              </p>
+              <p>
+                Amber Studio is founder-led. When you work with us, you work directly with Enes —
+                not a junior account manager or an outsourced team.
+              </p>
+            </div>
+
+            <div className="mt-8 p-5 bg-white border border-stone-200 rounded-xl">
+              <p className="text-stone-500 text-sm italic leading-relaxed">
+                &ldquo;Most AI consulting focuses on large enterprises. Small agencies have different
+                constraints — fewer people, tighter timelines, and clients who need results, not
+                experiments. That is exactly the gap Amber Studio is built to fill.&rdquo;
+              </p>
+              <p className="text-stone-400 text-xs mt-3">— Enes Gokcek, Founder</p>
+            </div>
           </div>
         </div>
       </div>

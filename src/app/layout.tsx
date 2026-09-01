@@ -13,13 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amber Studio — AI Consulting & Strategy",
+  title: "Amber Studio — Practical AI Workflows for Small Agencies",
   description:
-    "Amber Studio helps businesses cut through the AI hype and implement solutions that drive real growth, efficiency, and results.",
+    "Amber Studio helps small agencies turn scattered AI usage into clear, repeatable workflows across content, reporting, client intake, follow-up, and operations.",
   openGraph: {
-    title: "Amber Studio — AI Consulting & Strategy",
-    description: "Turn AI into your competitive edge. Strategy, integration, and custom AI agents for your business.",
+    title: "Amber Studio — Practical AI Workflows for Small Agencies",
+    description:
+      "Practical AI workflows for small teams. Book a free 20-minute AI workflow review.",
     type: "website",
+    url: "https://amberstudio.ai",
   },
 };
 

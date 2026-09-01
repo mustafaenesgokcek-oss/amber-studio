@@ -1,54 +1,59 @@
 const steps = [
   {
     number: "01",
-    title: "Discovery Call",
+    title: "Book a 20-minute AI workflow review",
     description:
-      "We start with a free 30-minute call to understand your business, goals, and current challenges. No pitch — just honest conversation.",
+      "We look at one workflow your team is currently doing. No pitch, no pressure — just an honest conversation about what AI can realistically do for that specific task.",
   },
   {
     number: "02",
-    title: "AI Audit & Strategy",
+    title: "Receive a written audit and recommendations",
     description:
-      "We audit your workflows, data, and tech stack. Then we deliver a prioritized AI strategy with clear ROI projections.",
+      "You get a clear written report: where AI fits, where it does not, and what a practical next step looks like. Specific to your agency — not a generic overview.",
   },
   {
     number: "03",
-    title: "Build & Implement",
+    title: "Decide what to implement",
     description:
-      "Our team builds and integrates the solutions — whether that's an AI agent, automation pipeline, or analytics system.",
+      "If the audit surfaces opportunities worth acting on, we scope a Setup Package or Advisory engagement. If not, the report still gives you something useful. No pressure either way.",
   },
   {
     number: "04",
-    title: "Train & Hand Off",
+    title: "Your team gets the documentation",
     description:
-      "We train your team, document everything, and stay on as a partner. You own the results and know how to scale them.",
+      "Everything we design or recommend is written up in plain language — prompts, SOPs, guidelines, workflow maps — so your team can follow it without us in the room.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-black">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            How It <span className="text-amber-400">Works</span>
+    <section id="process" className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="text-center mb-14">
+          <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
+            Process
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-stone-900 leading-tight mb-5">
+            How it works
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A clear, structured process from first call to full deployment — no surprises.
+          <p className="text-stone-500 text-lg max-w-xl mx-auto">
+            A straightforward process from first call to finished documentation.
+            No long sales cycles or open-ended engagements.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, i) => (
-            <div key={step.number} className="relative">
-              {/* Connector line */}
-              {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-amber-500/50 to-transparent z-0" />
-              )}
-              <div className="relative z-10 bg-zinc-950 border border-gray-800 rounded-2xl p-6">
-                <div className="text-4xl font-black text-amber-500/30 mb-4">{step.number}</div>
-                <h3 className="text-white font-semibold text-lg mb-2">{step.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
+        <div className="space-y-4">
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="flex gap-6 bg-stone-50 border border-stone-100 rounded-2xl p-6 md:p-8"
+            >
+              <div className="shrink-0 w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
+                <span className="text-xs font-bold text-amber-700">{step.number}</span>
+              </div>
+              <div className="pt-1">
+                <h3 className="font-semibold text-stone-900 text-lg mb-2">{step.title}</h3>
+                <p className="text-stone-500 text-sm leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

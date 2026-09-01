@@ -1,56 +1,52 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
-      {/* Amber glow background */}
+    <section className="relative bg-amber-50 pt-28 pb-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-amber-700/10 rounded-full blur-2xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-amber-100/60 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 rounded-full px-4 py-1.5 mb-8">
-          <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-          <span className="text-amber-400 text-sm font-medium">AI Consulting & Strategy</span>
+      <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="inline-flex items-center gap-2 bg-white border border-amber-200 rounded-full px-4 py-1.5 mb-8 shadow-sm">
+          <span className="w-1.5 h-1.5 bg-amber-500 rounded-full" />
+          <span className="text-amber-700 text-sm font-medium">
+            Practical AI workflows for small teams
+          </span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-          Turn AI Into Your{" "}
-          <span className="text-amber-400">Competitive Edge</span>
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-stone-900 leading-[1.1] tracking-tight mb-6">
+          Your agency is already
+          <br />
+          using AI.{" "}
+          <span className="text-amber-500">
+            Now make
+            <br />
+            it work.
+          </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-          Amber Studio helps businesses cut through the AI hype and implement solutions
-          that actually drive growth, efficiency, and real results.
+        <p className="text-xl md:text-2xl text-stone-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Amber Studio helps small agencies turn scattered AI usage into clear, repeatable
+          workflows across content, reporting, client intake, follow-up, and operations.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#contact"
-            className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
+            className="bg-amber-500 hover:bg-amber-600 text-stone-900 font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-sm"
           >
-            Book a Free Strategy Call
+            Book a 20-Min AI Workflow Review
           </a>
           <a
             href="#services"
-            className="border border-gray-700 hover:border-amber-500 text-gray-300 hover:text-amber-400 font-semibold px-8 py-4 rounded-xl text-lg transition-all"
+            className="bg-white border border-stone-200 hover:border-amber-300 text-stone-700 hover:text-amber-700 font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-sm"
           >
-            See Our Services
+            See What We Deliver
           </a>
         </div>
 
-        {/* Stats row */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-gray-800 pt-12">
-          {[
-            { value: "10+", label: "AI Projects Delivered" },
-            { value: "3x", label: "Average ROI for Clients" },
-            { value: "100%", label: "Tailored Solutions" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-500">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+        <p className="mt-5 text-sm text-stone-400">
+          No commitment. We&apos;ll tell you honestly where AI can help — and where it probably should not.
+        </p>
       </div>
     </section>
   );
