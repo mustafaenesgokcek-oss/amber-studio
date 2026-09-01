@@ -1,42 +1,30 @@
 export default function Footer() {
   return (
-    <footer className="bg-stone-900 py-14">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-10 pb-10 border-b border-stone-800">
+    <footer className="bg-[#1C1714] py-16">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10 mb-12 pb-12 border-b border-[#3D3530]">
           <div>
-            <div className="text-xl font-bold text-white mb-1">
-              Amber <span className="text-amber-400">Studio</span>
-            </div>
-            <p className="text-stone-400 text-sm">Practical AI workflows for small teams.</p>
+            <div className="text-base font-semibold text-[#F8F5F0] mb-1">Amber Studio</div>
+            <p className="text-sm text-[#7A6F67]">Practical AI workflows for small teams.</p>
           </div>
 
-          <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-stone-500">
-            <a href="#services" className="hover:text-amber-400 transition-colors">
-              Services
-            </a>
-            <a href="#pricing" className="hover:text-amber-400 transition-colors">
-              Packages
-            </a>
-            <a href="#process" className="hover:text-amber-400 transition-colors">
-              Process
-            </a>
-            <a href="#founder" className="hover:text-amber-400 transition-colors">
-              About
-            </a>
-            <a href="#faq" className="hover:text-amber-400 transition-colors">
-              FAQ
-            </a>
-            <a href="#contact" className="hover:text-amber-400 transition-colors">
-              Contact
-            </a>
+          <div className="flex flex-wrap gap-x-10 gap-y-3 text-sm text-[#7A6F67]">
+            <a href="#services" className="hover:text-[#F8F5F0] transition-colors">Services</a>
+            <a href="#pricing" className="hover:text-[#F8F5F0] transition-colors">Packages</a>
+            <a href="#process" className="hover:text-[#F8F5F0] transition-colors">Process</a>
+            <a href="#founder" className="hover:text-[#F8F5F0] transition-colors">About</a>
+            <a href="#faq" className="hover:text-[#F8F5F0] transition-colors">FAQ</a>
+            <a href="#contact" className="hover:text-[#F8F5F0] transition-colors">Contact</a>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-stone-600">
-          <p>© {new Date().getFullYear()} Amber AI Studio. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <p className="text-xs text-[#7A6F67]">
+            © {new Date().getFullYear()} Amber AI Studio. All rights reserved.
+          </p>
           <a
             href="mailto:hello@amberstudio.ai"
-            className="hover:text-amber-400 transition-colors"
+            className="text-xs text-[#7A6F67] hover:text-[#F8F5F0] transition-colors"
           >
             hello@amberstudio.ai
           </a>

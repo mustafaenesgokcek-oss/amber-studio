@@ -36,44 +36,41 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-stone-50">
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-stone-900 leading-tight">
+    <section id="faq" className="py-24 bg-[#F8F5F0]">
+      <div className="max-w-4xl mx-auto px-8">
+        <div className="max-w-xl mb-14">
+          <p className="text-sm text-[#B07628] mb-5">FAQ</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1C1714] leading-tight">
             Common questions
           </h2>
         </div>
 
-        <div className="space-y-3">
+        <div className="border-t border-[#DDD5C8] divide-y divide-[#DDD5C8]">
           {faqs.map((faq, i) => (
-            <div
-              key={i}
-              className="bg-white border border-stone-200 rounded-2xl overflow-hidden"
-            >
+            <div key={i}>
               <button
-                className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+                className="w-full flex items-center justify-between gap-6 py-6 text-left cursor-pointer"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="font-semibold text-stone-900 text-sm leading-snug">
+                <span className="font-medium text-[#1C1714] leading-snug text-sm">
                   {faq.q}
                 </span>
                 <svg
-                  className={`shrink-0 w-5 h-5 text-amber-500 transition-transform duration-200 ${
+                  className={`shrink-0 w-4 h-4 text-[#9B8C82] transition-transform duration-200 ${
                     open === i ? "rotate-180" : ""
                   }`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  strokeWidth={2}
+                  strokeWidth={1.5}
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               {open === i && (
-                <div className="px-6 pb-5 pt-1 text-stone-500 text-sm leading-relaxed border-t border-stone-100">
-                  <div className="pt-4">{faq.a}</div>
-                </div>
+                <p className="pb-6 text-sm text-[#7A6F67] leading-relaxed max-w-2xl">
+                  {faq.a}
+                </p>
               )}
             </div>
           ))}

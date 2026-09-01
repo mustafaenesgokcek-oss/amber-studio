@@ -5,14 +5,31 @@
   --font-mono: var(--font-geist-mono);
 }
 
+:root {
+  --ivory:      #F8F5F0;
+  --parchment:  #EDE8DF;
+  --charcoal:   #1C1714;
+  --ink:        #3D3530;
+  --muted:      #7A6F67;
+  --clay:       #9B8C82;
+  --amber:      #B07628;
+  --amber-pale: #F2E8D6;
+  --rule:       #DDD5C8;
+}
+
 body {
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
-  color: #1c1917;
+  background-color: var(--ivory);
+  color: var(--charcoal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--amber-pale);
+  color: var(--charcoal);
 }

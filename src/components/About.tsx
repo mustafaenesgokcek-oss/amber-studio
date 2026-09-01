@@ -1,43 +1,18 @@
-const tags = [
-  "Digital marketing",
-  "Analytics",
-  "AI workflow strategy",
-  "Business systems",
-  "Content analytics",
-  "Economics & statistics",
-];
-
 export default function About() {
   return (
-    <section id="founder" className="py-24 bg-amber-50">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-14 items-start">
+    <section id="founder" className="py-24 bg-[#EDE8DF]">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
           <div>
-            <div className="w-16 h-16 rounded-2xl bg-amber-200 flex items-center justify-center mb-6">
-              <span className="text-xl font-bold text-amber-800">EG</span>
-            </div>
-            <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-1">
-              Founder
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-1">Enes Gokcek</h2>
-            <p className="text-stone-500 text-sm mb-8">
-              Digital marketing · Analytics · AI workflows · Business systems
+            <p className="text-sm text-[#B07628] mb-5">Founder</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1C1714] mb-1 leading-tight">
+              Enes Gokcek
+            </h2>
+            <p className="text-sm text-[#9B8C82] mb-8">
+              Digital marketing &middot; Analytics &middot; AI workflow strategy &middot; Business systems
             </p>
 
-            <div className="grid grid-cols-2 gap-2.5">
-              {tags.map((tag) => (
-                <div
-                  key={tag}
-                  className="bg-white border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-600 text-center"
-                >
-                  {tag}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <div className="space-y-5 text-stone-600 leading-relaxed">
+            <div className="space-y-5 text-[#3D3530] text-base leading-relaxed">
               <p>
                 Amber Studio is led by Enes Gokcek, who works across digital marketing, analytics,
                 AI workflow strategy, and business systems.
@@ -58,14 +33,39 @@ export default function About() {
                 not a junior account manager or an outsourced team.
               </p>
             </div>
+          </div>
 
-            <div className="mt-8 p-5 bg-white border border-stone-200 rounded-xl">
-              <p className="text-stone-500 text-sm italic leading-relaxed">
+          <div className="flex flex-col gap-8">
+            <blockquote className="border-l-2 border-[#B07628] pl-6">
+              <p className="text-[#3D3530] text-base leading-relaxed italic">
                 &ldquo;Most AI consulting focuses on large enterprises. Small agencies have different
                 constraints — fewer people, tighter timelines, and clients who need results, not
                 experiments. That is exactly the gap Amber Studio is built to fill.&rdquo;
               </p>
-              <p className="text-stone-400 text-xs mt-3">— Enes Gokcek, Founder</p>
+              <p className="text-xs text-[#9B8C82] mt-4">— Enes Gokcek, Founder</p>
+            </blockquote>
+
+            <div className="border-t border-[#DDD5C8] pt-8">
+              <p className="text-xs text-[#9B8C82] uppercase tracking-wide mb-4">Background</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Digital marketing",
+                  "Analytics",
+                  "AI workflow strategy",
+                  "Business systems",
+                  "Content analytics",
+                  "Economics & statistics",
+                  "Computer science",
+                  "Affiliate marketing",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs text-[#7A6F67] border border-[#DDD5C8] px-3 py-1"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

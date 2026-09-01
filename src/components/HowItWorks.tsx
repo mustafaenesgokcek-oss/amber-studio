@@ -27,33 +27,28 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="process" className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
-            Process
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-stone-900 leading-tight mb-5">
+    <section id="process" className="py-24 bg-[#FAF8F4]">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm text-[#B07628] mb-5">Process</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1C1714] leading-tight mb-6">
             How it works
           </h2>
-          <p className="text-stone-500 text-lg max-w-xl mx-auto">
+          <p className="text-[#3D3530] text-lg leading-relaxed">
             A straightforward process from first call to finished documentation.
             No long sales cycles or open-ended engagements.
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="border-t border-[#DDD5C8] divide-y divide-[#DDD5C8] max-w-3xl">
           {steps.map((step) => (
-            <div
-              key={step.number}
-              className="flex gap-6 bg-stone-50 border border-stone-100 rounded-2xl p-6 md:p-8"
-            >
-              <div className="shrink-0 w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
-                <span className="text-xs font-bold text-amber-700">{step.number}</span>
-              </div>
-              <div className="pt-1">
-                <h3 className="font-semibold text-stone-900 text-lg mb-2">{step.title}</h3>
-                <p className="text-stone-500 text-sm leading-relaxed">{step.description}</p>
+            <div key={step.number} className="py-8 flex gap-8">
+              <span className="shrink-0 text-sm font-mono text-[#9B8C82] pt-0.5 w-6">
+                {step.number}
+              </span>
+              <div>
+                <h3 className="font-medium text-[#1C1714] mb-2">{step.title}</h3>
+                <p className="text-sm text-[#7A6F67] leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

@@ -53,49 +53,34 @@ const deliverables = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
-            Deliverables
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-stone-900 leading-tight mb-5">
+    <section id="services" className="py-24 bg-[#F8F5F0]">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm text-[#B07628] mb-5">Deliverables</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1C1714] leading-tight mb-6">
             What you will actually receive
           </h2>
-          <p className="text-stone-500 text-lg max-w-2xl mx-auto">
-            Every engagement ends with written deliverables your team can use, follow, and
-            build on — not just a conversation or general advice.
+          <p className="text-[#3D3530] text-lg leading-relaxed">
+            Every engagement ends with written deliverables your team can use, follow,
+            and build on — not just a conversation or general advice.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {deliverables.map((d) => (
-            <div
-              key={d.title}
-              className="group bg-stone-50 border border-stone-100 hover:border-amber-200 hover:bg-amber-50/40 rounded-2xl p-6 transition-all"
-            >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="shrink-0 w-6 h-6 bg-amber-100 rounded-md flex items-center justify-center mt-0.5">
-                  <svg
-                    className="w-3.5 h-3.5 text-amber-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-stone-900 group-hover:text-amber-700 transition-colors leading-snug text-sm">
-                  {d.title}
-                </h3>
+        <div className="grid md:grid-cols-2 gap-x-16">
+          {deliverables.map((d, i) => (
+            <div key={d.title} className="border-t border-[#DDD5C8] py-6 flex gap-6">
+              <span className="shrink-0 text-xs font-mono text-[#9B8C82] pt-0.5 w-5">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h3 className="font-medium text-[#1C1714] mb-1.5 leading-snug">{d.title}</h3>
+                <p className="text-sm text-[#7A6F67] leading-relaxed">{d.description}</p>
               </div>
-              <p className="text-stone-500 text-sm leading-relaxed pl-9">{d.description}</p>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-stone-400 text-sm mt-8">
+        <p className="mt-10 text-xs text-[#9B8C82] border-t border-[#DDD5C8] pt-6">
           Not every engagement includes all deliverables. Your package determines which ones apply.
         </p>
       </div>
